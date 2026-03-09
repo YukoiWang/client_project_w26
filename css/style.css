@@ -1,0 +1,290 @@
+/*
+  UMSI Career Development Resource Hub - Mobile First Styles
+  UM Brand Guidelines: https://brand.umich.edu/
+  Primary colors: Blue #00274C, Maize #FFCB05, White #FFFFFF
+*/
+
+/* Skip to Main Content - hidden until focus, a11y */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background: #00274C;
+  color: #FFFFFF;
+  padding: 0.75rem 1rem;
+  z-index: 100;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 0 0 0.25rem 0;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 0;
+  outline: 0.25rem solid #FFCB05;
+  outline-offset: 0.25rem;
+}
+
+/* prefers-reduced-motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .skip-link {
+    transition: none;
+  }
+}
+
+/* Base typography - fluid, mobile first */
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.6;
+  color: #00274C;
+  background: #FFFFFF;
+}
+
+/* Fluid container */
+.container {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 1rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Header */
+header {
+  background: #00274C;
+  color: #FFFFFF;
+  padding: 1rem 0;
+}
+
+header .container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.header-logo {
+  max-width: 12rem;
+  height: auto;
+  display: block;
+}
+
+/* Navigation - touch-friendly, fluid */
+nav ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+
+nav a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #FFFFFF;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  min-height: 2.75rem;
+  text-align: center;
+  line-height: 1.4;
+}
+
+nav a:hover,
+nav a:focus {
+  background: rgba(255, 203, 5, 0.3);
+  color: #FFFFFF;
+  outline: 0.2rem solid #FFCB05;
+  outline-offset: 0.2rem;
+}
+
+/* Active page - accessible (not just color) */
+nav a[aria-current="page"] {
+  background: #FFCB05;
+  color: #00274C;
+  font-weight: bold;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  grid-column: 1 / -1;
+}
+
+/* Main content */
+main {
+  padding: 1.5rem 0;
+  min-height: 50vh;
+}
+
+main h2 {
+  font-size: 1.35rem;
+  margin-bottom: 0.75rem;
+  color: #00274C;
+}
+
+main h3 {
+  font-size: 1.15rem;
+  margin: 1rem 0 0.5rem;
+}
+
+main p {
+  margin-bottom: 1rem;
+}
+
+main ul,
+main ol {
+  margin: 0 0 1rem 1.25rem;
+  padding-left: 0;
+}
+
+main ul {
+  list-style: disc;
+}
+
+main ol {
+  list-style: decimal;
+}
+
+main li {
+  margin-bottom: 0.5rem;
+}
+
+main a {
+  color: #00274C;
+  text-decoration: underline;
+}
+
+main a:hover,
+main a:focus {
+  color: #2F65A7;
+  outline: 0.2rem solid #FFCB05;
+}
+
+/* Home page - Grid layout (2+ columns) */
+.home-intro {
+  margin-bottom: 1.5rem;
+}
+
+.home-resources {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.home-resources .resource-card {
+  background: #f5f5f5;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  border-left: 0.25rem solid #FFCB05;
+}
+
+.home-resources .resource-card a {
+  font-weight: bold;
+}
+
+.home-popular {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  margin: 1rem 0;
+}
+
+/* Video responsive */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 1rem 0;
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  height: auto;
+  min-height: 12rem;
+  aspect-ratio: 16 / 9;
+}
+
+/* Resume page - Grid layout */
+.resume-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.resume-steps {
+  grid-column: 1 / -1;
+}
+
+.resume-resources {
+  grid-column: 1 / -1;
+}
+
+.resume-faq {
+  grid-column: 1 / -1;
+}
+
+/* Networking page - Grid layout */
+.networking-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.networking-card {
+  background: #f5f5f5;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  border-top: 0.25rem solid #00274C;
+}
+
+/* Interviews page - Grid layout */
+.interviews-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.interview-type {
+  background: #f5f5f5;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  border-left: 0.25rem solid #FFCB05;
+}
+
+/* Footer - consistent across all pages */
+footer {
+  background: #00274C;
+  color: #FFFFFF;
+  padding: 1.5rem 1rem;
+  margin-top: 2rem;
+}
+
+footer a {
+  color: #FFCB05;
+  text-decoration: underline;
+}
+
+footer a:hover,
+footer a:focus {
+  color: #FFFFFF;
+  outline: 0.2rem solid #FFCB05;
+}
+
+/* Image styling */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
