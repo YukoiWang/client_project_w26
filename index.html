@@ -51,24 +51,29 @@
 
             <section>
                 <h2>Start Here</h2>
-                <div class="home-resources">
-                    <div class="resource-card">
+                <div class="resource-search-wrap">
+                    <label for="home-resource-search">Search resources on this page</label>
+                    <input type="search" id="home-resource-search" class="js-resource-search" data-search-root="#home-search-root" data-search-count="#home-search-count" autocomplete="off" placeholder="Keyword (e.g. resume, interview, event, coach)">
+                    <p id="home-search-count" class="search-results-count" aria-live="polite"></p>
+                </div>
+                <div id="home-search-root" class="home-resources">
+                    <div class="resource-card" data-search-column>
                         <img src="images/UMSI_CampusFall_UMSIBackpack_02.jpg" alt="A student wears a UMSI backpack in fall on the drag.">
                         <ul>
-                            <li><a href="resume.html">Resumes</a></li>
-                            <li><a href="networking.html">Networking & Connections</a></li>
-                            <li><a href="interviews.html">Career Exploration & Interviews</a></li>
-                            <li><a href="https://umich.instructure.com/courses/137916/pages/talk-to-a-career-coach" target="_blank" rel="noopener noreferrer">Talk to a Career Coach</a></li>
+                            <li class="js-search-item"><a href="resume.html">Resumes</a></li>
+                            <li class="js-search-item"><a href="networking.html">Networking & Connections</a></li>
+                            <li class="js-search-item"><a href="interviews.html">Career Exploration & Interviews</a></li>
+                            <li class="js-search-item"><a href="https://umich.instructure.com/courses/137916/pages/talk-to-a-career-coach" target="_blank" rel="noopener noreferrer">Talk to a Career Coach</a></li>
                         </ul>
                     </div>
-                    <div class="home-popular">
+                    <div class="home-popular" data-search-column>
                         <h3>Most Popular Resources</h3>
                         <ul>
-                            <li><a href="https://docs.google.com/document/d/1_1GfDJyVGIgE82MZjVhuWT_aB_2Hcj1NN62FUCXoR_o/edit?tab=t.0" target="_blank" rel="noopener noreferrer">UMSI Resume Guide</a></li>
-                            <li><a href="https://umich.instructure.com/courses/137916/pages/attend-an-event" target="_blank" rel="noopener noreferrer">Attend a Career Event</a></li>
-                            <li><a href="https://docs.google.com/document/d/18HMt79BU8ovGf9z7_P7No5tuwUS6qHNW5u0sgrepLtE/edit?tab=t.0" target="_blank" rel="noopener noreferrer">Networking Tips</a></li>
-                            <li><a href="https://docs.google.com/presentation/d/15n-XqsFEntdbkZz89K-ohf7Or1NnCt5CQNDG-6fh2a0/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Interview Preparation</a></li>
-                            <li><a href="https://si-umich.12twenty.com/Login" target="_blank" rel="noopener noreferrer">Career Link: UMSI's Exclusive Career Portal</a></li>
+                            <li class="js-search-item"><a href="https://docs.google.com/document/d/1_1GfDJyVGIgE82MZjVhuWT_aB_2Hcj1NN62FUCXoR_o/edit?tab=t.0" target="_blank" rel="noopener noreferrer">UMSI Resume Guide</a></li>
+                            <li class="js-search-item"><a href="https://umich.instructure.com/courses/137916/pages/attend-an-event" target="_blank" rel="noopener noreferrer">Attend a Career Event</a></li>
+                            <li class="js-search-item"><a href="https://docs.google.com/document/d/18HMt79BU8ovGf9z7_P7No5tuwUS6qHNW5u0sgrepLtE/edit?tab=t.0" target="_blank" rel="noopener noreferrer">Networking Tips</a></li>
+                            <li class="js-search-item"><a href="https://docs.google.com/presentation/d/15n-XqsFEntdbkZz89K-ohf7Or1NnCt5CQNDG-6fh2a0/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Interview Preparation</a></li>
+                            <li class="js-search-item"><a href="https://si-umich.12twenty.com/Login" target="_blank" rel="noopener noreferrer">Career Link: UMSI's Exclusive Career Portal</a></li>
                         </ul>
                     </div>
                 </div>

@@ -270,6 +270,99 @@ main ul.resource-cards {
   text-decoration: underline;
 }
 
+/* Resource search (home + resume) */
+.resource-search-wrap,
+.resume-search-section {
+  margin: 1rem 0 1.25rem;
+  padding: 1rem;
+  background: #f5f5f5;
+  border-radius: 0.5rem;
+  border-left: 0.25rem solid #00274C;
+}
+
+.resource-search-wrap label,
+.resume-search-section label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #00274C;
+}
+
+.resource-search-wrap input[type="search"],
+.resume-search-section input[type="search"] {
+  width: 100%;
+  max-width: 32rem;
+  padding: 0.65rem 0.85rem;
+  font: inherit;
+  border: 0.12rem solid #00274C;
+  border-radius: 0.35rem;
+  min-height: 2.75rem;
+  box-sizing: border-box;
+}
+
+.resource-search-wrap input[type="search"]:focus,
+.resume-search-section input[type="search"]:focus {
+  outline: 0.2rem solid #FFCB05;
+  outline-offset: 0.15rem;
+}
+
+.search-results-count {
+  margin: 0.5rem 0 0;
+  min-height: 1.5rem;
+  font-size: 0.95rem;
+}
+
+/* FAQ accordion */
+.faq-accordion {
+  margin-top: 0.75rem;
+}
+
+.faq-item {
+  border-bottom: 0.08rem solid #ccc;
+  padding: 0.35rem 0;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-item h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.faq-item button {
+  width: 100%;
+  text-align: left;
+  font: inherit;
+  font-weight: 700;
+  color: #00274C;
+  background: #f9f9f9;
+  border: 0.1rem solid #00274C;
+  border-radius: 0.35rem;
+  padding: 0.75rem 0.9rem;
+  cursor: pointer;
+  min-height: 2.75rem;
+}
+
+.faq-item button:hover,
+.faq-item button:focus {
+  outline: 0.2rem solid #FFCB05;
+  outline-offset: 0.15rem;
+}
+
+.faq-item button[aria-expanded="true"] {
+  background: rgba(255, 203, 5, 0.25);
+}
+
+.faq-panel {
+  padding: 0 0.25rem 0.75rem;
+}
+
+.faq-panel p {
+  margin: 0.5rem 0 0;
+}
+
 .resume-steps {
   grid-column: 1 / -1;
 }

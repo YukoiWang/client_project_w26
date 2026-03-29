@@ -37,34 +37,41 @@
                 <p>Need feedback? You can always <a href="https://umich.instructure.com/courses/137916/pages/talk-to-a-career-coach" target="_blank" rel="noopener noreferrer">meet with a CDO Career Coach</a> to review your materials.</p>
             </section>
 
+            <section class="resume-search-section">
+                <label for="resume-resource-search">Search this page</label>
+                <input type="search" id="resume-resource-search" class="js-resource-search" data-search-root="#resume-search-root" data-search-count="#resume-search-count" autocomplete="off" placeholder="Search steps, resources, or FAQ (e.g. page length, projects, workshop)">
+                <p id="resume-search-count" class="search-results-count" aria-live="polite"></p>
+            </section>
+
+            <div id="resume-search-root">
             <section class="resume-grid">
-                <div class="resume-steps">
+                <div class="resume-steps" data-search-column>
                     <h2>Resume Writing Made Easy: Steps to Success</h2>
                     <ol class="card-list">
-                        <li><strong>Download a UMSI-Approved Template:</strong> Start with a format that works—no need to design from scratch.</li>
-                        <li><strong>Gather Your Experiences:</strong> List jobs, internships, volunteer roles, coursework, and projects most relevant to your goals.</li>
-                        <li><strong>Write Impactful Bullets:</strong> Use action verbs and highlight your skills, results, and unique contributions.</li>
-                        <li><strong>Tailor for Each Opportunity:</strong> Customize your resume for every job or internship you pursue.</li>
-                        <li><strong>Review and Edit:</strong> Proofread for errors, check formatting, and ask for feedback from peers or a career coach.</li>
+                        <li class="js-search-item"><strong>Download a UMSI-Approved Template:</strong> Start with a format that works—no need to design from scratch.</li>
+                        <li class="js-search-item"><strong>Gather Your Experiences:</strong> List jobs, internships, volunteer roles, coursework, and projects most relevant to your goals.</li>
+                        <li class="js-search-item"><strong>Write Impactful Bullets:</strong> Use action verbs and highlight your skills, results, and unique contributions.</li>
+                        <li class="js-search-item"><strong>Tailor for Each Opportunity:</strong> Customize your resume for every job or internship you pursue.</li>
+                        <li class="js-search-item"><strong>Review and Edit:</strong> Proofread for errors, check formatting, and ask for feedback from peers or a career coach.</li>
                     </ol>
                 </div>
 
-                <div class="resume-resources">
+                <div class="resume-resources" data-search-column>
                     <h2>Resume Resources</h2>
                     <ul class="resource-cards">
-                        <li>
+                        <li class="js-search-item">
                             <a href="https://docs.google.com/document/d/1_1GfDJyVGIgE82MZjVhuWT_aB_2Hcj1NN62FUCXoR_o/edit?tab=t.0" target="_blank" rel="noopener noreferrer">UMSI Resume Guide and Rubric</a>
                             <p>Comprehensive UMSI guide including tips, formatting rules, and sample accomplishments.</p>
                         </li>
-                        <li>
+                        <li class="js-search-item">
                             <a href="https://docs.google.com/document/d/1-EVZYH_Fic4mfLVGOXyHTSeRwBWmmi2WHSgGDLGGPEs/edit?tab=t.0" target="_blank" rel="noopener noreferrer">Writing Effective Resume Bullets</a>
                             <p>Learn how to describe your work and impact in ways employers notice.</p>
                         </li>
-                        <li>
+                        <li class="js-search-item">
                             <a href="https://docs.google.com/document/d/1vJMfgw9nwpHN9Sy0L0RP0aNBbaDSsiLPc2vy-doac6s/edit?tab=t.0" target="_blank" rel="noopener noreferrer">Resume Rubric</a>
                             <p>Evaluate your resume using the same criteria as the Career Development Office.</p>
                         </li>
-                        <li>
+                        <li class="js-search-item">
                             <a href="https://umich.instructure.com/courses/137916/modules" target="_blank" rel="noopener noreferrer">Application Materials: Workshops and More</a>
                             <p>Attend a Resume Refresh workshop, review video tutorials, or access additional templates.</p>
                         </li>
@@ -72,16 +79,45 @@
                     <p>Ready for review? <a href="https://umich.instructure.com/courses/137916/pages/talk-to-a-career-coach" target="_blank" rel="noopener noreferrer">Book a resume review appointment with a CDO Career Coach</a>.</p>
                 </div>
 
-                <div class="resume-faq">
+                <div class="resume-faq" data-search-column>
                     <h2>Resume FAQ</h2>
-                    <ul>
-                        <li><strong>How long should my resume be?</strong> For most UMSI students and new grads, one page is best. More experienced professionals may require two pages.</li>
-                        <li><strong>Do I need a different resume for each application?</strong> It is wise to tailor your resume to the requirements and keywords of each opportunity.</li>
-                        <li><strong>Is it okay to include coursework or student projects?</strong> Absolutely! UMSI coursework and projects are valued by employers, especially if they show relevant skills and impact.</li>
-                        <li><strong>How often should I update my resume?</strong> Update your resume every semester, after major projects, or whenever you gain a new role or responsibility.</li>
-                    </ul>
+                    <div class="faq-accordion" role="region" aria-label="Resume frequently asked questions">
+                        <div class="faq-item js-search-item">
+                            <h3>
+                                <button type="button" id="faq-btn-1" aria-expanded="false" aria-controls="faq-panel-1">How long should my resume be?</button>
+                            </h3>
+                            <div id="faq-panel-1" class="faq-panel" aria-labelledby="faq-btn-1" hidden>
+                                <p>For most UMSI students and new grads, one page is best. More experienced professionals may require two pages.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item js-search-item">
+                            <h3>
+                                <button type="button" id="faq-btn-2" aria-expanded="false" aria-controls="faq-panel-2">Do I need a different resume for each application?</button>
+                            </h3>
+                            <div id="faq-panel-2" class="faq-panel" aria-labelledby="faq-btn-2" hidden>
+                                <p>It is wise to tailor your resume to the requirements and keywords of each opportunity.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item js-search-item">
+                            <h3>
+                                <button type="button" id="faq-btn-3" aria-expanded="false" aria-controls="faq-panel-3">Is it okay to include coursework or student projects?</button>
+                            </h3>
+                            <div id="faq-panel-3" class="faq-panel" aria-labelledby="faq-btn-3" hidden>
+                                <p>Absolutely! UMSI coursework and projects are valued by employers, especially if they show relevant skills and impact.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item js-search-item">
+                            <h3>
+                                <button type="button" id="faq-btn-4" aria-expanded="false" aria-controls="faq-panel-4">How often should I update my resume?</button>
+                            </h3>
+                            <div id="faq-panel-4" class="faq-panel" aria-labelledby="faq-btn-4" hidden>
+                                <p>Update your resume every semester, after major projects, or whenever you gain a new role or responsibility.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
+            </div>
         </div>
         <!-- Content taken & modified from UMGPT with the prompt, "for the same content write me some intro content and resources for a resume page" -->
         <!-- UMGPT. (2025). UMGPT (GPT-4.1 August 25th version) [Large language model]. -->
